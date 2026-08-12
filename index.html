@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#FDFBF6">
-<title>Murgi.net — M/S Shamim Traders-এর সাথে দৈনিক হিসাব</title>
+<title>MURGI.NET — M/S Shamim Traders-এর সাথে দৈনিক হিসাব</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -14,8 +14,8 @@
     --green-card:#F3FAF5; --green-line:#D2E9D9;
     --cream:#FFF9E8; --cream-line:#F2D68A;
     --red:#C9362C; --green:#23865B; --muted:#667085;
-    --white:#FFFFFF; --bg:#FDFBF6; --hair:#E7ECF3; --edge:#EEE7DA; --label-card:#F8FAFC;
-    --wa:#128C7E; --radius:16px;
+    --white:#FFFFFF; --bg:#FDFBF6; --hair:#E7ECF3; --edge:#EEE7DA;
+    --label-card:#F8FAFC; --wa:#128C7E; --radius:16px;
   }
   *{box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
   html,body{margin:0;padding:0;}
@@ -29,7 +29,7 @@
 
   header{background:var(--white);border:1px solid var(--edge);border-radius:var(--radius);padding:18px 16px;margin-bottom:14px;}
   .top-row{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;}
-  h1{font-size:24px;font-weight:700;margin:0;letter-spacing:-.015em;line-height:1.2;
+  h1{font-size:24px;font-weight:700;margin:0;letter-spacing:-.01em;line-height:1.2;
      font-family:Inter,system-ui,sans-serif;}
   .rel{font-size:14px;color:var(--muted);margin-top:4px;line-height:1.4;}
   .lang{display:flex;border:1px solid var(--blue-line);border-radius:999px;overflow:hidden;flex:none;}
@@ -45,7 +45,7 @@
     -webkit-appearance:none;appearance:none;
   }
 
-  /* ---------- one unified 3-column comparison grid ---------- */
+  /* one unified 3-column comparison grid */
   .grid{
     display:grid;
     grid-template-columns:minmax(74px,0.92fr) 1fr 1fr;
@@ -55,10 +55,7 @@
     overflow:hidden;
     margin-bottom:14px;
   }
-  .cell{
-    display:flex;align-items:center;justify-content:center;
-    padding:9px 7px;min-height:62px;
-  }
+  .cell{display:flex;align-items:center;justify-content:center;padding:9px 7px;min-height:60px;}
   .cell.lb{justify-content:flex-start;padding-left:12px;font-size:13px;color:var(--muted);
     line-height:1.25;text-align:left;}
   .c-lb{background:var(--label-card);}
@@ -72,15 +69,15 @@
   .grid input[type="text"]{
     width:100%;max-width:100%;background:var(--white);color:var(--navy);
     border:1px solid #DFE5EC;border-radius:10px;
-    padding:9px 6px;font-size:15px;font-weight:600;text-align:center;min-height:44px;
+    padding:9px 6px;font-size:15px;font-weight:600;text-align:center;min-height:42px;
     font-family:Inter,system-ui,sans-serif;font-variant-numeric:tabular-nums;
     -webkit-appearance:none;appearance:none;
   }
   .gv{font-size:16px;font-weight:700;font-family:Inter,system-ui,sans-serif;
       font-variant-numeric:tabular-nums;text-align:center;line-height:1.2;}
   input:focus-visible{outline:2px solid var(--navy);outline-offset:1px;}
-  .neg{color:var(--red);} .pos{color:var(--green);} .zero{color:var(--navy);}
-  .formula{font-size:12px;color:var(--muted);text-align:center;margin:-4px 0 14px;}
+  .neg{color:var(--green);} .pos{color:var(--red);} .zero{color:var(--navy);}
+  .formula{font-size:12px;color:var(--muted);text-align:center;margin:-4px 0 14px;line-height:1.5;}
 
   @media (max-width:389px){
     .wrap{padding-left:10px;padding-right:10px;}
@@ -88,14 +85,39 @@
     .grid input[type="text"]{font-size:14px;padding:8px 4px;}
     .gv{font-size:15px;}
     .hd{font-size:14px;}
-    .grid{grid-template-columns:minmax(66px,0.86fr) 1fr 1fr;}
+    .grid{grid-template-columns:minmax(66px,0.9fr) 1fr 1fr;}
   }
 
   .result{background:var(--cream);border:1px solid var(--cream-line);border-radius:var(--radius);
-    padding:18px 16px;text-align:center;margin-bottom:16px;}
+    padding:18px 16px;text-align:center;margin-bottom:12px;}
   .arrow{font-size:38px;line-height:1;font-family:Inter,system-ui,sans-serif;}
   .result-text{font-size:16px;font-weight:600;margin-top:6px;}
   .result-amt{font-size:32px;font-weight:700;margin-top:4px;letter-spacing:-.02em;}
+  .result-sub{font-size:13px;color:var(--muted);margin-top:6px;line-height:1.5;}
+
+  .why{background:var(--white);border:1px solid var(--hair);border-radius:var(--radius);
+    padding:14px 16px;margin-bottom:12px;}
+  .why h3{margin:0 0 8px;font-size:14px;font-weight:700;color:var(--navy);}
+  .why ul{margin:0;padding-left:18px;}
+  .why li{font-size:13.5px;color:var(--muted);margin-bottom:4px;}
+  .why li b{color:var(--navy);font-family:Inter,system-ui,sans-serif;font-weight:600;}
+
+  .dep{background:var(--blue-card);border:1px solid var(--blue-line);border-radius:var(--radius);
+    padding:16px;margin-bottom:14px;}
+  .dep h3{margin:0 0 6px;font-size:15px;font-weight:700;}
+  .dep p{margin:0 0 10px;font-size:13px;color:var(--muted);line-height:1.5;}
+  .dep .amt{font-size:24px;font-weight:700;font-family:Inter,system-ui,sans-serif;
+    font-variant-numeric:tabular-nums;}
+  .hide{display:none;}
+  .notebox{background:var(--white);border:1px solid var(--hair);border-radius:var(--radius);
+    padding:14px 16px;margin-bottom:12px;}
+  .notebox label{display:block;font-size:13px;color:var(--muted);margin-bottom:6px;}
+  .notebox textarea{
+    width:100%;background:var(--white);color:var(--navy);border:1px solid #DFE5EC;border-radius:10px;
+    padding:10px 12px;font-size:15px;line-height:1.5;min-height:76px;resize:vertical;
+    font-family:"Noto Sans Bengali",Inter,system-ui,sans-serif;
+  }
+  .notebox textarea:focus-visible{outline:2px solid var(--navy);outline-offset:1px;}
 
   .btn{width:100%;border:0;border-radius:14px;padding:15px;font-size:16px;font-weight:700;
     font-family:"Noto Sans Bengali",Inter,system-ui,sans-serif;cursor:pointer;margin-bottom:10px;min-height:52px;}
@@ -104,6 +126,64 @@
   .btn-png{background:transparent;color:var(--muted);border:1px solid var(--hair);
     font-size:14px;min-height:44px;padding:11px;}
   .btn:active{transform:translateY(1px);}
+  footer{text-align:center;color:var(--muted);font-size:12px;margin-top:14px;}
+
+  /* ---- saved records list ---- */
+  .savedbox{background:var(--white);border:1px solid var(--hair);border-radius:var(--radius);
+    padding:14px 16px;margin-bottom:12px;}
+  .savedbox h2{margin:0 0 10px;font-size:15px;font-weight:700;}
+  .savedlist{display:flex;flex-direction:column;gap:0;}
+  .savedlist button{
+    display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%;
+    background:transparent;border:0;border-top:1px solid var(--hair);
+    padding:12px 4px;font-size:15px;font-weight:600;color:var(--navy);cursor:pointer;
+    font-family:Inter,system-ui,sans-serif;font-variant-numeric:tabular-nums;min-height:46px;
+  }
+  .savedlist button:first-child{border-top:0;}
+  .savedlist button:active{background:var(--label-card);}
+  .savedlist .tick{color:var(--green);font-weight:700;margin-right:8px;}
+  .savedlist .chev{color:var(--muted);font-weight:400;}
+  .savedlist button.cur{background:var(--label-card);}
+  .savedempty{font-size:13px;color:var(--muted);}
+
+  /* ---- v3.0 additive: date range report ---- */
+  .btn-range{background:var(--white);color:var(--navy);border:1.5px solid var(--blue-line);}
+  .rangebox{background:var(--white);border:1px solid var(--hair);border-radius:var(--radius);
+    padding:16px;margin-bottom:12px;}
+  .rangebox h2{margin:0 0 12px;font-size:16px;font-weight:700;}
+  .rrow{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px;}
+  .rsum{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin:14px 0 10px;}
+  .rsum > div{border:1px solid var(--hair);border-radius:12px;padding:10px 8px;text-align:center;}
+  .rsum .k{font-size:11.5px;color:var(--muted);line-height:1.3;}
+  .rsum .v{font-size:15px;font-weight:700;margin-top:4px;
+    font-family:Inter,system-ui,sans-serif;font-variant-numeric:tabular-nums;}
+  .rsum .start{background:var(--blue-card);border-color:var(--blue-line);}
+  .rsum .end{background:var(--green-card);border-color:var(--green-line);}
+  .rsum .chg{background:var(--cream);border-color:var(--cream-line);}
+  .chartwrap{border:1px solid var(--hair);border-radius:12px;padding:10px 6px 4px;margin-bottom:12px;}
+  .chartwrap h3{margin:2px 0 6px 8px;font-size:13px;font-weight:700;}
+  .chartwrap svg{display:block;width:100%;height:auto;}
+  .rtable{width:100%;border-collapse:collapse;font-size:12.5px;}
+  .rtable th,.rtable td{padding:7px 5px;text-align:right;border-top:1px solid var(--hair);
+    font-family:Inter,system-ui,sans-serif;font-variant-numeric:tabular-nums;white-space:nowrap;}
+  .rtable th{color:var(--muted);font-weight:600;font-size:11.5px;
+    font-family:"Noto Sans Bengali",Inter,sans-serif;border-top:0;}
+  .rtable td.d,.rtable th.d{text-align:left;}
+  .rtable tr.miss td{color:var(--muted);text-align:left;
+    font-family:"Noto Sans Bengali",Inter,sans-serif;}
+  .rtable td.net{font-weight:700;}
+  .rnote{font-size:12px;color:var(--muted);margin:8px 0 0;line-height:1.5;}
+  @media (max-width:560px){
+    .rsum{grid-template-columns:1fr;}
+    .rtable thead{display:none;}
+    .rtable tr{display:block;border-top:1px solid var(--hair);padding:8px 0;}
+    .rtable td{display:flex;justify-content:space-between;border:0;padding:3px 2px;white-space:normal;}
+    .rtable td::before{content:attr(data-l);color:var(--muted);font-size:11.5px;
+      font-family:"Noto Sans Bengali",Inter,sans-serif;padding-right:10px;}
+    .rtable td.d{font-weight:700;}
+    .rtable td.d::before{content:"";}
+    .rtable tr.miss td::before{content:"";}
+  }
 
   #toast{
     position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(12px);
@@ -131,40 +211,88 @@
       </div>
     </div>
     <div class="meta">
-      <label class="f" id="t-date" for="date">তারিখ</label>
+      <label class="f" id="t-date" for="date">হিসাবের তারিখ</label>
       <input type="date" id="date">
     </div>
   </header>
 
   <div class="grid">
     <div class="cell hd c-lb lb" id="t-lbhead">হিসাবের নাম</div>
-    <div class="cell hd c-y" id="t-yhead">গতকাল</div>
-    <div class="cell hd c-t" id="t-thead">আজ</div>
+    <div class="cell hd c-y num" id="t-yhead">—</div>
+    <div class="cell hd c-t num" id="t-thead">—</div>
 
-    <div class="cell lb c-lb rl"><label for="ysup" id="t-sup1">সাপ্লায়ার ডিউ</label></div>
-    <div class="cell c-y rl"><input type="text" id="ysup" inputmode="numeric" autocomplete="off" aria-label="গতকালের সাপ্লায়ার ডিউ"></div>
-    <div class="cell c-t rl"><input type="text" id="tsup" inputmode="numeric" autocomplete="off" aria-label="আজকের সাপ্লায়ার ডিউ"></div>
+    <div class="cell lb c-lb rl"><label for="ysup" id="t-sup">সাপ্লায়ার ডিউ</label></div>
+    <div class="cell c-y rl"><input type="text" id="ysup" inputmode="numeric" autocomplete="off"></div>
+    <div class="cell c-t rl"><input type="text" id="tsup" inputmode="numeric" autocomplete="off"></div>
 
-    <div class="cell lb c-lb rl"><label for="ymar" id="t-mar1">মার্কেট ডিউ</label></div>
-    <div class="cell c-y rl"><input type="text" id="ymar" inputmode="numeric" autocomplete="off" aria-label="গতকালের মার্কেট ডিউ"></div>
-    <div class="cell c-t rl"><input type="text" id="tmar" inputmode="numeric" autocomplete="off" aria-label="আজকের মার্কেট ডিউ"></div>
+    <div class="cell lb c-lb rl"><label for="ymar" id="t-mar">মার্কেট ডিউ</label></div>
+    <div class="cell c-y rl"><input type="text" id="ymar" inputmode="numeric" autocomplete="off"></div>
+    <div class="cell c-t rl"><input type="text" id="tmar" inputmode="numeric" autocomplete="off"></div>
 
-    <div class="cell lb c-lb rl-strong"><span class="gap-lb" id="t-gap1">গ্যাপ</span></div>
+    <div class="cell lb c-lb rl"><label for="ystk" id="t-stk">স্টক ভ্যালু</label></div>
+    <div class="cell c-y rl"><input type="text" id="ystk" inputmode="numeric" autocomplete="off"></div>
+    <div class="cell c-t rl"><input type="text" id="tstk" inputmode="numeric" autocomplete="off"></div>
+
+    <div class="cell lb c-lb rl"><label for="ycsh" id="t-csh">ক্যাশ অ্যাকাউন্টস</label></div>
+    <div class="cell c-y rl"><input type="text" id="ycsh" inputmode="numeric" autocomplete="off"></div>
+    <div class="cell c-t rl"><input type="text" id="tcsh" inputmode="numeric" autocomplete="off"></div>
+
+    <div class="cell lb c-lb rl"><label for="ydep" id="t-dep">ডিপোজিট পেন্ডিং</label></div>
+    <div class="cell c-y rl"><input type="text" id="ydep" inputmode="numeric" autocomplete="off"></div>
+    <div class="cell c-t rl"><input type="text" id="tdep" inputmode="numeric" autocomplete="off"></div>
+
+    <div class="cell lb c-lb rl-strong"><span class="gap-lb" id="t-net">নেট গ্যাপ</span></div>
     <div class="cell c-y rl-strong"><div class="gv" id="ygap">0 BDT</div></div>
     <div class="cell c-t rl-strong"><div class="gv" id="tgap">0 BDT</div></div>
   </div>
 
-  <div class="formula" id="t-formula">গ্যাপ = সাপ্লায়ার ডিউ − মার্কেট ডিউ</div>
+  <div class="formula" id="t-formula">নেট গ্যাপ = সাপ্লায়ার ডিউ − মার্কেট ডিউ − স্টক ভ্যালু − ক্যাশ অ্যাকাউন্টস</div>
+
+  <div class="notebox">
+    <label for="note" id="t-note">নোট (ঐচ্ছিক)</label>
+    <textarea id="note" rows="3"></textarea>
+  </div>
 
   <section class="result">
     <div class="arrow" id="arrow">→</div>
-    <div class="result-text" id="res-text">গতকালের তুলনায় গ্যাপ অপরিবর্তিত রয়েছে</div>
+    <div class="result-text" id="res-text">—</div>
     <div class="result-amt num" id="res-amt"></div>
+    <div class="result-sub hide" id="res-sub"></div>
+  </section>
+
+  <section class="why hide" id="why">
+    <h3 id="why-h"></h3>
+    <ul id="why-list"></ul>
+  </section>
+
+  <section class="dep hide" id="depcard">
+    <h3 id="dep-h">ডিপোজিট পেন্ডিং</h3>
+    <p id="dep-p">M/S Shamim Traders-কে জমা দেওয়া হয়েছে, কিন্তু এখনো তাদের হিসাবে সমন্বয় হয়নি।</p>
+    <div class="amt" id="dep-amt">0 BDT</div>
   </section>
 
   <button class="btn btn-share" id="share" type="button">WhatsApp-এ শেয়ার করুন</button>
   <button class="btn btn-save" id="save" type="button">হিসাব সংরক্ষণ করুন</button>
   <button class="btn btn-png" id="png" type="button">PNG ডাউনলোড করুন</button>
+
+  <section class="savedbox hide" id="savedbox">
+    <h2 id="t-savedhead">সংরক্ষিত হিসাব</h2>
+    <div class="savedlist" id="savedlist"></div>
+  </section>
+
+  <button class="btn btn-range" id="range-open" type="button">তারিখ অনুযায়ী হিসাব দেখুন</button>
+
+  <section class="rangebox hide" id="rangebox">
+    <h2 id="t-rtitle">তারিখ অনুযায়ী হিসাব</h2>
+    <div class="rrow">
+      <div><label class="f" id="t-rstart" for="rstart">শুরুর তারিখ</label><input type="date" id="rstart"></div>
+      <div><label class="f" id="t-rend" for="rend">শেষের তারিখ</label><input type="date" id="rend"></div>
+    </div>
+    <button class="btn btn-save" id="range-run" type="button">রিপোর্ট দেখুন</button>
+    <div id="range-out"></div>
+  </section>
+
+  <footer>© Foisal Ahmed · v3.0</footer>
 </div>
 
 <div id="toast" role="status" aria-live="polite"></div>
@@ -175,55 +303,67 @@
 "use strict";
 
 var SUPPLIER = "M/S Shamim Traders";
-var COMPANY  = "Murgi.net";
-var BRAND    = "MURGI.NET";   /* header display only */
+var COMPANY  = "Murgi.net";      /* caption wording — unchanged */
+var BRAND    = "MURGI.NET";      /* header display */
+var CREDIT   = "\u00A9 Foisal Ahmed \u00B7 v3.0";
+
 var C = {
   navy:"#172B4D", blueCard:"#F3F8FE", blueLine:"#C9DFF7",
   greenCard:"#F3FAF5", greenLine:"#D2E9D9",
   cream:"#FFF9E8", creamLine:"#F2D68A",
   red:"#C9362C", green:"#23865B", muted:"#667085",
-  white:"#FFFFFF", bg:"#FDFBF6", hair:"#E7ECF3", edge:"#EEE7DA", hairStrong:"#D8DFE9",
-  labelCard:"#F8FAFC"
+  white:"#FFFFFF", bg:"#FDFBF6", hair:"#E7ECF3", edge:"#EEE7DA",
+  hairStrong:"#D8DFE9", labelCard:"#F8FAFC"
 };
 
 var TXT = {
   bn:{
-    rel:"M/S Shamim Traders-এর সাথে দৈনিক হিসাব", date:"তারিখ",
-    yhead:"গতকাল", thead:"আজ",
-    sup:"সাপ্লায়ার ডিউ", mar:"মার্কেট ডিউ", gap:"গ্যাপ",
-    formula:"গ্যাপ = সাপ্লায়ার ডিউ − মার্কেট ডিউ",
+    rel:"M/S Shamim Traders-এর সাথে দৈনিক হিসাব", date:"হিসাবের তারিখ",
+    lbhead:"হিসাবের নাম",
+    sup:"সাপ্লায়ার ডিউ", mar:"মার্কেট ডিউ", stk:"স্টক ভ্যালু",
+    csh:"ক্যাশ অ্যাকাউন্টস", dep:"ডিপোজিট পেন্ডিং", net:"নেট গ্যাপ",
+    formula:"নেট গ্যাপ = সাপ্লায়ার ডিউ − মার্কেট ডিউ − স্টক ভ্যালু − ক্যাশ অ্যাকাউন্টস",
+    noteLabel:"নোট (ঐচ্ছিক)", noteHead:"নোট", gapWord:"গ্যাপ",
     save:"হিসাব সংরক্ষণ করুন", share:"WhatsApp-এ শেয়ার করুন", png:"PNG ডাউনলোড করুন",
-    up:"গতকালের তুলনায় গ্যাপ বেড়েছে",
-    down:"গতকালের তুলনায় গ্যাপ কমেছে",
-    same:"গতকালের তুলনায় গ্যাপ অপরিবর্তিত রয়েছে",
+    rose:"বেড়েছে", fell:"কমেছে",
+    depNote:"M/S Shamim Traders-কে জমা দেওয়া হয়েছে, কিন্তু এখনো তাদের হিসাবে সমন্বয় হয়নি।",
     saved:"সংরক্ষণ হয়েছে", loaded:"সংরক্ষিত হিসাব লোড হয়েছে",
+    savedHead:"সংরক্ষিত হিসাব",
+    savedOn:function(d){ return d + "-এর হিসাব সংরক্ষণ হয়েছে"; },
+    needFields:"সাপ্লায়ার ডিউ ও মার্কেট ডিউ ছাড়া হিসাব সংরক্ষণ করা যাবে না",
+    noSaved:"এখনো কোনো হিসাব সংরক্ষিত হয়নি",
+    prevOnly:"পূর্ববর্তী তারিখের তথ্য পাওয়া গেছে",
     carried:"আগের দিনের হিসাব থেকে পূরণ করা হয়েছে",
     fresh:"এই তারিখে সংরক্ষিত হিসাব নেই",
-    noShare:"এই ডিভাইসে সরাসরি শেয়ার করা যাচ্ছে না",
-    textOnly:"শুধু ক্যাপশন শেয়ার করা হচ্ছে",
-    downloaded:"PNG সংরক্ষণ হয়েছে"
+    noShare:"এই ডিভাইসে সরাসরি ছবি শেয়ার সমর্থিত নয়। PNG সংরক্ষণ করা হয়েছে।",
+    exportFail:"রিপোর্ট ইমেজ তৈরি করা যায়নি"
   },
   en:{
-    rel:"Daily accounts with M/S Shamim Traders", date:"Date",
-    yhead:"Yesterday", thead:"Today",
-    sup:"সাপ্লায়ার ডিউ", mar:"মার্কেট ডিউ", gap:"গ্যাপ",
-    formula:"Gap = Supplier Due − Market Due",
+    rel:"Daily accounts with M/S Shamim Traders", date:"হিসাবের তারিখ",
+    lbhead:"হিসাবের নাম",
+    sup:"সাপ্লায়ার ডিউ", mar:"মার্কেট ডিউ", stk:"স্টক ভ্যালু",
+    csh:"ক্যাশ অ্যাকাউন্টস", dep:"ডিপোজিট পেন্ডিং", net:"নেট গ্যাপ",
+    formula:"Net Gap = Supplier Due − Market Due − Stock Value − Cash Accounts",
+    noteLabel:"নোট (ঐচ্ছিক)", noteHead:"নোট", gapWord:"গ্যাপ",
     save:"Save accounts", share:"Share on WhatsApp", png:"Download PNG",
-    up:"Gap increased compared to yesterday",
-    down:"Gap decreased compared to yesterday",
-    same:"Gap unchanged compared to yesterday",
+    rose:"increased", fell:"decreased",
+    depNote:"Deposited to M/S Shamim Traders but not yet posted in their accounts.",
     saved:"Saved", loaded:"Loaded saved accounts",
+    savedHead:"সংরক্ষিত হিসাব",
+    savedOn:function(d){ return d + "-এর হিসাব সংরক্ষণ হয়েছে"; },
+    needFields:"সাপ্লায়ার ডিউ ও মার্কেট ডিউ ছাড়া হিসাব সংরক্ষণ করা যাবে না",
+    noSaved:"এখনো কোনো হিসাব সংরক্ষিত হয়নি",
+    prevOnly:"Previous date's figures found",
     carried:"Filled from the previous saved day",
     fresh:"No saved accounts for this date",
-    noShare:"This device cannot share directly",
-    textOnly:"Sharing the caption only",
-    downloaded:"PNG saved"
+    noShare:"Direct image sharing is not supported here. The PNG was saved.",
+    exportFail:"Could not build the report image"
   }
 };
 var lang = "bn";
 function T(){ return TXT[lang]; }
 
-/* ---------- storage ---------- */
+/* ---------- storage (v1 records stay readable) ---------- */
 var mem = {};
 var store = {
   get:function(k){
@@ -243,6 +383,16 @@ var store = {
   }
 };
 function key(iso){ return "gap:" + iso; }
+
+/* v1 records hold only ys/ym/ts/tm — missing fields read as 0, nothing is erased */
+function migrate(rec){
+  if(!rec) return null;
+  return {
+    ys:+rec.ys||0, ym:+rec.ym||0, ystk:+rec.ystk||0, ycsh:+rec.ycsh||0, ydep:+rec.ydep||0,
+    ts:+rec.ts||0, tm:+rec.tm||0, tstk:+rec.tstk||0, tcsh:+rec.tcsh||0, tdep:+rec.tdep||0,
+    note: typeof rec.note === "string" ? rec.note : ""
+  };
+}
 
 /* ---------- numbers ---------- */
 function digitsOnly(s){ return String(s).replace(/[^0-9]/g,""); }
@@ -268,7 +418,12 @@ function prevISO(iso){
 
 /* ---------- elements ---------- */
 function $(id){ return document.getElementById(id); }
-var elDate=$("date"), elYS=$("ysup"), elYM=$("ymar"), elTS=$("tsup"), elTM=$("tmar");
+var elDate=$("date");
+var IN = {
+  ys:$("ysup"), ym:$("ymar"), ystk:$("ystk"), ycsh:$("ycsh"), ydep:$("ydep"),
+  ts:$("tsup"), tm:$("tmar"), tstk:$("tstk"), tcsh:$("tcsh"), tdep:$("tdep")
+};
+var elNote=$("note");
 var elYG=$("ygap"), elTG=$("tgap"), elArrow=$("arrow"), elResT=$("res-text"), elResA=$("res-amt");
 
 var toastTimer;
@@ -280,7 +435,8 @@ function toast(msg){
   toastTimer = setTimeout(function(){ el.classList.remove("show"); }, 2400);
 }
 
-function attachFormat(el){
+Object.keys(IN).forEach(function(k){
+  var el = IN[k];
   el.addEventListener("input", function(){
     var caret = el.selectionStart;
     var before = digitsOnly(el.value.slice(0, caret)).length;
@@ -292,34 +448,145 @@ function attachFormat(el){
       pos++;
     }
     try{ el.setSelectionRange(pos,pos); }catch(e){}
+    if(["ys","ym","ystk","ycsh","ydep"].indexOf(k) !== -1 && el.value.trim() !== "") prevKnown = true;
     render();
   });
-}
-[elYS, elYM, elTS, elTM].forEach(attachFormat);
+});
 
-/* ---------- state (formulas unchanged) ---------- */
-function state(){
-  var ys=parseVal(elYS), ym=parseVal(elYM), ts=parseVal(elTS), tm=parseVal(elTM);
-  var yg = ys - ym, tg = ts - tm;   /* Gap = Supplier Due - Market Due */
-  return { ys:ys, ym:ym, ts:ts, tm:tm, ygap:yg, tgap:tg, change: tg - yg, date: elDate.value };
+/* ---------- date-aware wording: explicit dates, never গতকাল / আজ ---------- */
+function dirWord(dir, lg){
+  if(lg === "bn") return dir === "up" ? "বেড়েছে" : (dir === "down" ? "কমেছে" : "অপরিবর্তিত রয়েছে");
+  return dir === "up" ? "increased" : (dir === "down" ? "decreased" : "unchanged");
 }
-function cls(n){ return n<0 ? "neg" : (n>0 ? "pos" : "zero"); }
+function changeText(prev, sel, dir, lg){
+  if(lg === "bn") return prev + "-এর তুলনায় " + sel + " তারিখে গ্যাপ " + dirWord(dir, lg);
+  return "Gap " + dirWord(dir, lg) + " on " + sel + " compared with " + prev;
+}
+function whyHead(sel, dir, amt, lg){
+  if(lg === "bn") return sel + " তারিখে গ্যাপ " + dirWord(dir, lg) + " " + amt + " BDT কারণ:";
+  return "Gap " + dirWord(dir, lg) + " " + amt + " BDT on " + sel + " because:";
+}
+function missingHead(prev, lg){
+  return lg === "bn" ? prev + "-এর তথ্য পাওয়া যায়নি"
+                     : "No data found for " + prev;
+}
+function missingNote(lg){
+  return lg === "bn" ? "পূর্ববর্তী তারিখের তথ্য ছাড়া গ্যাপ পরিবর্তন গণনা করা যায় না।"
+                     : "Gap change cannot be calculated without the previous date's figures.";
+}
+function dirOf(n){ return n > 0 ? "up" : (n < 0 ? "down" : "same"); }
+
+/* previous-date figures are known only if loaded from storage or typed in — never assumed 0 */
+var prevKnown = false;
+function prevEntered(){
+  return ["ys","ym","ystk","ycsh","ydep"].some(function(k){ return IN[k].value.trim() !== ""; });
+}
+
+/* ---------- the one place the maths lives ---------- */
+function state(){
+  var v = {};
+  Object.keys(IN).forEach(function(k){ v[k] = parseVal(IN[k]); });
+  /* Net Gap = Supplier Due − Market Due − Stock Value − Cash Accounts */
+  v.ynet = v.ys - (v.ym + v.ystk + v.ycsh);
+  v.tnet = v.ts - (v.tm + v.tstk + v.tcsh);
+  v.change = v.tnet - v.ynet;
+  /* Deposit Pending is a reconciliation note only — it never alters Net Gap */
+  v.note = (elNote.value || "").trim();
+  v.date = elDate.value;                 /* selected accounting date */
+  v.prevDate = v.date ? prevISO(v.date) : "";   /* selected date − 1 calendar day */
+  v.hasPrev = prevKnown || prevEntered();
+  return v;
+}
+/* positive Net Gap = uncovered amount (red), negative = covered (green) */
+function cls(n){ return n>0 ? "pos" : (n<0 ? "neg" : "zero"); }
+
+/* the few movements that actually explain the change */
+/* effect sign follows Net Gap = Supplier Due - Market Due - Stock Value - Cash Accounts */
+function reasons(s){
+  var t = T();
+  var items = [
+    [t.sup,  s.ts   - s.ys,    1],
+    [t.mar,  s.tm   - s.ym,   -1],
+    [t.stk,  s.tstk - s.ystk, -1],
+    [t.csh,  s.tcsh - s.ycsh, -1]
+  ].filter(function(r){ return r[1] !== 0; });
+  items.sort(function(a,b){ return Math.abs(b[1]) - Math.abs(a[1]); });
+  return items.slice(0,4).map(function(r){
+    var eff = r[1] * r[2];
+    return {
+      label:r[0],
+      word:(r[1] > 0 ? t.rose : t.fell),
+      amount:group(r[1]),
+      effect:eff,
+      effectText:(eff > 0 ? "+" : "\u2212") + group(eff)
+    };
+  });
+}
 
 function render(){
-  var s = state();
-  elYG.textContent = signed(s.ygap) + " BDT";
-  elTG.textContent = signed(s.tgap) + " BDT";
-  elYG.className = "gv " + cls(s.ygap);
-  elTG.className = "gv " + cls(s.tgap);
-  if(s.change > 0){
-    elArrow.textContent="↑"; elArrow.style.color=C.green;
-    elResT.textContent=T().up; elResA.textContent=group(s.change)+" BDT"; elResA.style.color=C.green;
-  } else if(s.change < 0){
-    elArrow.textContent="↓"; elArrow.style.color=C.red;
-    elResT.textContent=T().down; elResA.textContent=group(s.change)+" BDT"; elResA.style.color=C.red;
+  var s = state(), t = T();
+
+  /* column headers are the two actual accounting dates */
+  $("t-yhead").textContent = fmtDate(s.prevDate) || "—";
+  $("t-thead").textContent = fmtDate(s.date) || "—";
+
+  elYG.textContent = signed(s.ynet) + " BDT";
+  elTG.textContent = signed(s.tnet) + " BDT";
+  elYG.className = "gv " + cls(s.ynet);
+  elTG.className = "gv " + cls(s.tnet);
+
+  var pd = fmtDate(s.prevDate), sd = fmtDate(s.date);
+
+  if(!s.hasPrev){
+    /* no previous-date figures: say so, do not invent zeros */
+    elArrow.textContent="!"; elArrow.style.color=C.muted;
+    elResT.textContent = missingHead(pd, lang);
+    elResA.textContent = "";
+    $("res-sub").textContent = missingNote(lang);
+    $("res-sub").classList.remove("hide");
   } else {
-    elArrow.textContent="→"; elArrow.style.color=C.navy;
-    elResT.textContent=T().same; elResA.textContent="";
+    $("res-sub").classList.add("hide");
+    /* gap up = warning (red), gap down = improvement (green) */
+    if(s.change > 0){
+      elArrow.textContent="↑"; elArrow.style.color=C.red;
+      elResA.style.color=C.red;
+    } else if(s.change < 0){
+      elArrow.textContent="↓"; elArrow.style.color=C.green;
+      elResA.style.color=C.green;
+    } else {
+      elArrow.textContent="→"; elArrow.style.color=C.navy;
+      elResA.style.color=C.navy;
+    }
+    elResT.textContent = changeText(pd, sd, dirOf(s.change), lang);
+    elResA.textContent = group(s.change) + " BDT";
+  }
+
+  /* why it moved */
+  var rs = reasons(s), why = $("why");
+  if(s.hasPrev && s.change !== 0 && rs.length){
+    $("why-h").textContent = whyHead(sd, dirOf(s.change), group(s.change), lang);
+    var ul = $("why-list"); ul.innerHTML = "";
+    rs.forEach(function(r){
+      var li = document.createElement("li");
+      li.innerHTML = r.label + " " + r.word + " <b>" + r.amount + " BDT</b> \u2192 " +
+        t.gapWord + " <b style=\"color:" + (r.effect > 0 ? C.red : C.green) + "\">" +
+        r.effectText + "</b>";
+      ul.appendChild(li);
+    });
+    why.classList.remove("hide");
+  } else {
+    why.classList.add("hide");
+  }
+
+  /* deposit pending card only when there is a pending amount */
+  var card = $("depcard");
+  if(s.tdep > 0){
+    $("dep-h").textContent = t.dep;
+    $("dep-p").textContent = t.depNote;
+    $("dep-amt").textContent = group(s.tdep) + " BDT";
+    card.classList.remove("hide");
+  } else {
+    card.classList.add("hide");
   }
 }
 
@@ -327,9 +594,11 @@ function applyLang(){
   var t = T();
   document.documentElement.lang = lang;
   $("t-rel").textContent=t.rel; $("t-date").textContent=t.date;
-  $("t-yhead").textContent=t.yhead; $("t-thead").textContent=t.thead;
-  $("t-sup1").textContent=t.sup; $("t-mar1").textContent=t.mar; $("t-gap1").textContent=t.gap;
+  $("t-lbhead").textContent=t.lbhead;
+  $("t-sup").textContent=t.sup; $("t-mar").textContent=t.mar; $("t-stk").textContent=t.stk;
+  $("t-csh").textContent=t.csh; $("t-dep").textContent=t.dep; $("t-net").textContent=t.net;
   $("t-formula").textContent=t.formula;
+  $("t-note").textContent=t.noteLabel;
   $("save").textContent=t.save; $("share").textContent=t.share; $("png").textContent=t.png;
   $("btn-bn").classList.toggle("on", lang==="bn");
   $("btn-en").classList.toggle("on", lang==="en");
@@ -340,26 +609,101 @@ $("btn-en").onclick=function(){ lang="en"; applyLang(); store.set("gap:lang","en
 
 /* ---------- load / save ---------- */
 function fill(v){
-  elYS.value = v.ys ? group(v.ys) : "";
-  elYM.value = v.ym ? group(v.ym) : "";
-  elTS.value = v.ts ? group(v.ts) : "";
-  elTM.value = v.tm ? group(v.tm) : "";
+  Object.keys(IN).forEach(function(k){ IN[k].value = v[k] ? group(v[k]) : ""; });
+  elNote.value = v.note || "";
   render();
 }
+/* the selected date's own record holds that date's figures in ts/tm/tstk/tcsh/tdep;
+   the previous column is read from the previous calendar date's record, falling back to
+   the figures a v2 record stored inline for its previous day. Nothing is assumed. */
 function loadDate(iso){
-  return store.get(key(iso)).then(function(rec){
-    if(rec){ fill(rec); toast(T().loaded); return; }
-    return store.get(key(prevISO(iso))).then(function(prev){
-      if(prev){ fill({ys:prev.ts, ym:prev.tm, ts:prev.ts, tm:prev.tm}); toast(T().carried); }
-      else { fill({ys:0,ym:0,ts:0,tm:0}); toast(T().fresh); }
-    });
+  var prevIso = prevISO(iso);
+  return Promise.all([ store.get(key(iso)), store.get(key(prevIso)) ]).then(function(both){
+    var sel  = migrate(both[0]);
+    var prev = migrate(both[1]);
+    var v = { note: sel ? sel.note : "" };
+
+    if(sel){
+      v.ts = sel.ts; v.tm = sel.tm; v.tstk = sel.tstk; v.tcsh = sel.tcsh; v.tdep = sel.tdep;
+    }
+    if(prev){
+      prevKnown = true;
+      v.ys = prev.ts; v.ym = prev.tm; v.ystk = prev.tstk; v.ycsh = prev.tcsh; v.ydep = prev.tdep;
+    } else if(sel && (sel.ys || sel.ym || sel.ystk || sel.ycsh || sel.ydep)){
+      prevKnown = true;   /* inline previous-day figures kept by an older record */
+      v.ys = sel.ys; v.ym = sel.ym; v.ystk = sel.ystk; v.ycsh = sel.ycsh; v.ydep = sel.ydep;
+    } else {
+      prevKnown = false;
+    }
+
+    fill(v);
+    toast(sel ? T().loaded : (prevKnown ? T().prevOnly : T().fresh));
   });
 }
-$("save").onclick = function(){
+/* enough to be a real accounting record? */
+function saveable(s){ return s.ts > 0 && s.tm > 0; }
+
+/* the single save path: one authoritative record per accounting date, keyed by that date,
+   so saving the same date again updates it instead of adding a duplicate. */
+function saveCurrent(opts){
   var s = state();
-  store.set(key(s.date), {ys:s.ys, ym:s.ym, ts:s.ts, tm:s.tm}).then(function(){ toast(T().saved); });
+  if(!saveable(s)){ toast(T().needFields); return Promise.resolve(false); }
+  var recSel = {
+    ys:s.ys, ym:s.ym, ystk:s.ystk, ycsh:s.ycsh, ydep:s.ydep,
+    ts:s.ts, tm:s.tm, tstk:s.tstk, tcsh:s.tcsh, tdep:s.tdep, note:s.note
+  };
+  var jobs = [ store.set(key(s.date), recSel) ];
+  /* seed the previous date only when it has no record of its own — never overwrite one */
+  if(s.hasPrev && s.prevDate && (s.ys > 0 || s.ym > 0)){
+    jobs.push(store.get(key(s.prevDate)).then(function(old){
+      if(old) return null;
+      var base = migrate({});
+      base.ts = s.ys; base.tm = s.ym; base.tstk = s.ystk; base.tcsh = s.ycsh; base.tdep = s.ydep;
+      return store.set(key(s.prevDate), base);
+    }).catch(function(){ return null; }));
+  }
+  return Promise.all(jobs).then(function(){
+    prevKnown = true;
+    if(!opts || opts.quiet !== true) toast(T().savedOn(fmtDate(s.date)));
+    return refreshSavedList().then(function(){ return true; });
+  }).catch(function(){ return false; });
+}
+
+/* compact list of the dates that actually have records, newest first */
+function refreshSavedList(){
+  return listSavedDates().then(function(dates){
+    var boxEl = $("savedbox"), list = $("savedlist");
+    if(!boxEl || !list) return;
+    $("t-savedhead").textContent = T().savedHead;
+    if(!dates.length){
+      list.innerHTML = '<p class="savedempty">' + T().noSaved + '</p>';
+      return;
+    }
+    var cur = elDate.value;
+    list.innerHTML = "";
+    dates.slice().reverse().forEach(function(iso){
+      var b = document.createElement("button");
+      b.type = "button";
+      if(iso === cur) b.className = "cur";
+      b.innerHTML = '<span><span class="tick">\u2713</span>' + fmtDate(iso) + '</span><span class="chev">\u203A</span>';
+      b.onclick = function(){
+        elDate.value = iso;      /* existing daily workflow, including previous-date comparison */
+        loadDate(iso).then(refreshSavedList);
+      };
+      list.appendChild(b);
+    });
+  }).catch(function(){});
+}
+function showSavedList(){
+  var boxEl = $("savedbox");
+  if(boxEl) boxEl.classList.remove("hide");
+}
+
+$("save").onclick = function(){
+  saveCurrent().then(function(ok){ if(ok) showSavedList(); });
 };
-elDate.addEventListener("change", function(){ loadDate(elDate.value); });
+elNote.addEventListener("input", function(){ render(); });
+elDate.addEventListener("change", function(){ loadDate(elDate.value).then(refreshSavedList); });
 
 /* ---------- report image ---------- */
 var BN = '"Noto Sans Bengali","Bangla",sans-serif';
@@ -380,9 +724,42 @@ function box(ctx,x,y,w,h,r,fill,stroke){
   if(stroke){ ctx.strokeStyle=stroke; ctx.lineWidth=2; ctx.stroke(); }
 }
 
+function wrapLines(text, font, maxW){
+  var c = document.createElement("canvas").getContext("2d");
+  c.font = font;
+  var out = [], words = String(text).split(/\s+/), line = "";
+  words.forEach(function(w){
+    var trial = line ? line + " " + w : w;
+    if(c.measureText(trial).width > maxW && line){ out.push(line); line = w; }
+    else { line = trial; }
+  });
+  if(line) out.push(line);
+  return out.slice(0, 6);
+}
+
 function drawReport(){
-  var s = state();
-  var W = 1080, H = 806;
+  var s = state(), t = TXT.bn;   /* the shared report stays Bengali */
+  var rs = reasons(s);
+  var showWhy = (s.hasPrev && s.change !== 0 && rs.length > 0);
+  var showDep = s.tdep > 0;
+  var showNote = s.note.length > 0;
+  var noteFont = "500 23px " + BN;
+  var noteLines = showNote ? wrapLines(s.note, noteFont, (1080 - 62*2) - 60) : [];
+
+  var W = 1080, pad = 62;
+  var gridTop = 262;
+  var headH = 62, rowH = 62, nRows = 5;
+  var gridH = headH + rowH*nRows;
+  var chH = 176;
+  var whyH = showWhy ? (52 + rs.length*40 + 14) : 0;
+  var depH = showDep ? 150 : 0;
+  var noteH = showNote ? (48 + noteLines.length*34 + 14) : 0;
+  var H = gridTop + gridH + 30 + chH
+        + (showWhy ? 22 + whyH : 0)
+        + (showDep ? 22 + depH : 0)
+        + (showNote ? 22 + noteH : 0)
+        + 74;
+
   var cv = $("cv");
   cv.width = W; cv.height = H;
   var ctx = cv.getContext("2d");
@@ -391,172 +768,597 @@ function drawReport(){
   ctx.fillStyle = C.bg; ctx.fillRect(0,0,W,H);
   box(ctx, 28, 28, W-56, H-56, 26, C.white, C.edge);
 
-  var pad = 62;
-
-  /* header — Murgi.net owns this report */
+  /* header — MURGI.NET owns this report */
   ctx.textAlign = "center";
   ctx.fillStyle = C.navy; ctx.font = "700 52px " + EN;
   ctx.fillText(BRAND, W/2, 108);
   ctx.fillStyle = C.navy; ctx.font = "500 29px " + BN;
   ctx.fillText(SUPPLIER + "-এর সাথে দৈনিক হিসাব", W/2, 162);
   ctx.fillStyle = C.muted; ctx.font = "500 26px " + BN;
-  ctx.fillText("তারিখ: " + fmtDate(s.date), W/2, 208);
+  ctx.fillText("হিসাবের তারিখ: " + fmtDate(s.date), W/2, 208);
 
-  /* ONE unified 3-column comparison grid */
+  /* unified 3-column comparison grid */
   var gx = pad, gw = W - pad*2;
-  var gyTop = 262;
   var labelW = 300;
   var colW = (gw - labelW) / 2;
-  var yColX = gx + labelW;
-  var tColX = yColX + colW;
-  var headH = 62, rowH = 70, nRows = 3;
-  var gridH = headH + rowH*nRows;
+  var yColX = gx + labelW, tColX = yColX + colW;
 
   ctx.save();
-  rr(ctx, gx, gyTop, gw, gridH, 22);
+  rr(ctx, gx, gridTop, gw, gridH, 22);
   ctx.clip();
-  ctx.fillStyle = C.white; ctx.fillRect(gx, gyTop, gw, gridH);
-  ctx.fillStyle = C.labelCard; ctx.fillRect(gx, gyTop, labelW, gridH);
-  ctx.fillStyle = C.blueCard;  ctx.fillRect(yColX, gyTop, colW, gridH);
-  ctx.fillStyle = C.greenCard; ctx.fillRect(tColX, gyTop, colW, gridH);
+  ctx.fillStyle = C.white;      ctx.fillRect(gx, gridTop, gw, gridH);
+  ctx.fillStyle = C.labelCard;  ctx.fillRect(gx, gridTop, labelW, gridH);
+  ctx.fillStyle = C.blueCard;   ctx.fillRect(yColX, gridTop, colW, gridH);
+  ctx.fillStyle = C.greenCard;  ctx.fillRect(tColX, gridTop, colW, gridH);
 
-  /* column headers align exactly over their own columns */
-  var headMid = gyTop + headH/2;
+  var headMid = gridTop + headH/2;
   ctx.fillStyle = C.navy; ctx.font = "700 27px " + BN;
   ctx.textAlign = "left";
-  ctx.fillText("হিসাবের নাম", gx + 26, headMid + 4);
-  ctx.textAlign = "center"; ctx.font = "700 28px " + BN;
-  ctx.fillText("গতকাল", yColX + colW/2, headMid + 4);
-  ctx.fillText("আজ",    tColX + colW/2, headMid + 4);
+  ctx.fillText(t.lbhead, gx + 26, headMid + 4);
+  ctx.textAlign = "center"; ctx.font = "700 26px " + EN;
+  ctx.fillText(fmtDate(s.prevDate), yColX + colW/2, headMid + 4);
+  ctx.fillText(fmtDate(s.date),     tColX + colW/2, headMid + 4);
 
-  var data = [
-    ["সাপ্লায়ার ডিউ", group(s.ys)+" BDT", group(s.ts)+" BDT", C.navy, C.navy, false],
-    ["মার্কেট ডিউ",   group(s.ym)+" BDT", group(s.tm)+" BDT", C.navy, C.navy, false],
-    ["গ্যাপ",          signed(s.ygap)+" BDT", signed(s.tgap)+" BDT",
-       s.ygap<0?C.red:(s.ygap>0?C.green:C.navy),
-       s.tgap<0?C.red:(s.tgap>0?C.green:C.navy), true]
+  var rows = [
+    [t.sup, group(s.ys)+" BDT",   group(s.ts)+" BDT",   C.navy, C.navy, false],
+    [t.mar, group(s.ym)+" BDT",   group(s.tm)+" BDT",   C.navy, C.navy, false],
+    [t.stk, group(s.ystk)+" BDT", group(s.tstk)+" BDT", C.navy, C.navy, false],
+    [t.csh, group(s.ycsh)+" BDT", group(s.tcsh)+" BDT", C.navy, C.navy, false],
+    [t.net, signed(s.ynet)+" BDT", signed(s.tnet)+" BDT",
+      s.ynet>0?C.red:(s.ynet<0?C.green:C.navy),
+      s.tnet>0?C.red:(s.tnet<0?C.green:C.navy), true]
   ];
-  var ry = gyTop + headH;
-  data.forEach(function(r, i){
+  var ry = gridTop + headH;
+  rows.forEach(function(r){
     var mid = ry + rowH/2;
     ctx.strokeStyle = r[5] ? C.hairStrong : C.hair;
     ctx.lineWidth = r[5] ? 2 : 1.5;
-    ctx.beginPath(); ctx.moveTo(gx, ry); ctx.lineTo(gx + gw, ry); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(gx, ry); ctx.lineTo(gx+gw, ry); ctx.stroke();
     ctx.textAlign = "left";
     ctx.fillStyle = r[5] ? C.navy : C.muted;
-    ctx.font = (r[5] ? "700 28px " : "500 26px ") + BN;
+    ctx.font = (r[5] ? "700 27px " : "500 25px ") + BN;
     ctx.fillText(r[0], gx + 26, mid + 2);
     ctx.textAlign = "center";
-    ctx.font = (r[5] ? "700 32px " : "600 28px ") + EN;
+    ctx.font = (r[5] ? "700 31px " : "600 27px ") + EN;
     ctx.fillStyle = r[3]; ctx.fillText(r[1], yColX + colW/2, mid);
     ctx.fillStyle = r[4]; ctx.fillText(r[2], tColX + colW/2, mid);
     ry += rowH;
   });
   ctx.restore();
-  box(ctx, gx, gyTop, gw, gridH, 22, null, C.hair);
+  box(ctx, gx, gridTop, gw, gridH, 22, null, C.hair);
 
-  /* gap change */
-  var cy = gyTop + gridH + 34;
-  var ch = 176;
-  box(ctx, pad, cy, W - pad*2, ch, 20, C.cream, C.creamLine);
-  var arrow = s.change>0 ? "↑" : (s.change<0 ? "↓" : "→");
-  var color = s.change>0 ? C.green : (s.change<0 ? C.red : C.navy);
-  var line  = s.change>0 ? "গতকালের তুলনায় গ্যাপ বেড়েছে"
-            : (s.change<0 ? "গতকালের তুলনায় গ্যাপ কমেছে"
-                          : "গতকালের তুলনায় গ্যাপ অপরিবর্তিত রয়েছে");
+  /* gap change panel */
+  var cy = gridTop + gridH + 30;
+  box(ctx, pad, cy, gw, chH, 20, C.cream, C.creamLine);
   ctx.textAlign = "center";
-  if(s.change !== 0){
-    ctx.fillStyle = color; ctx.font = "700 44px " + EN;
-    ctx.fillText(arrow, W/2, cy + 44);
+  if(!s.hasPrev){
     ctx.fillStyle = C.navy; ctx.font = "600 27px " + BN;
-    ctx.fillText(line, W/2, cy + 94);
-    ctx.fillStyle = color; ctx.font = "700 48px " + EN;
-    ctx.fillText(group(s.change) + " BDT", W/2, cy + 143);
+    ctx.fillText(missingHead(fmtDate(s.prevDate), "bn"), W/2, cy + 68);
+    ctx.fillStyle = C.muted; ctx.font = "500 22px " + BN;
+    ctx.fillText(missingNote("bn"), W/2, cy + 116);
   } else {
-    ctx.fillStyle = color; ctx.font = "700 48px " + EN;
-    ctx.fillText(arrow, W/2, cy + 62);
-    ctx.fillStyle = C.navy; ctx.font = "600 28px " + BN;
-    ctx.fillText(line, W/2, cy + 120);
+    var arrow = s.change>0 ? "↑" : (s.change<0 ? "↓" : "→");
+    var color = s.change>0 ? C.red : (s.change<0 ? C.green : C.navy);
+    var line  = changeText(fmtDate(s.prevDate), fmtDate(s.date), dirOf(s.change), "bn");
+    ctx.fillStyle = color; ctx.font = "700 44px " + EN;
+    ctx.fillText(arrow, W/2, cy + 42);
+    ctx.fillStyle = C.navy; ctx.font = "600 25px " + BN;
+    ctx.fillText(line, W/2, cy + 92);
+    ctx.fillStyle = color; ctx.font = "700 46px " + EN;
+    ctx.fillText(group(s.change) + " BDT", W/2, cy + 140);
+  }
+  var yy = cy + chH;
+
+  /* why the gap moved — short, glanceable */
+  if(showWhy){
+    yy += 22;
+    box(ctx, pad, yy, gw, whyH, 20, C.white, C.hair);
+    ctx.textAlign = "left";
+    ctx.fillStyle = C.navy; ctx.font = "700 25px " + BN;
+    ctx.fillText(whyHead(fmtDate(s.date), dirOf(s.change), group(s.change), "bn"), pad+28, yy+34);
+    var by = yy + 72;
+    rs.forEach(function(r){
+      ctx.textAlign = "left";
+      ctx.fillStyle = C.muted; ctx.font = "500 23px " + BN;
+      ctx.fillText("\u2022  " + r.label + " " + r.word + " " + r.amount + " BDT", pad+34, by);
+      ctx.textAlign = "right";
+      ctx.fillStyle = C.muted; ctx.font = "500 22px " + BN;
+      var eTxt = t.gapWord + " ";
+      var eNum = r.effectText;
+      ctx.font = "600 23px " + EN;
+      ctx.fillStyle = r.effect > 0 ? C.red : C.green;
+      ctx.fillText(eNum, W - pad - 30, by);
+      var numW = ctx.measureText(eNum).width;
+      ctx.fillStyle = C.muted; ctx.font = "500 22px " + BN;
+      ctx.fillText(eTxt, W - pad - 34 - numW, by);
+      by += 40;
+    });
+    yy += whyH;
   }
 
-  return cv;
-}
+  /* deposit pending — only when there is one */
+  if(showDep){
+    yy += 22;
+    box(ctx, pad, yy, gw, depH, 20, C.blueCard, C.blueLine);
+    ctx.textAlign = "left";
+    ctx.fillStyle = C.navy; ctx.font = "700 27px " + BN;
+    ctx.fillText(t.dep, pad+28, yy+40);
+    ctx.fillStyle = C.muted; ctx.font = "500 22px " + BN;
+    ctx.fillText(t.depNote, pad+28, yy+78);
+    ctx.fillStyle = C.navy; ctx.font = "700 38px " + EN;
+    ctx.fillText(group(s.tdep) + " BDT", pad+28, yy+120);
+    yy += depH;
+  }
 
-function caption(){
-  var s = state();
-  var last = s.change > 0
-    ? "গতকালের তুলনায় " + COMPANY + " ও " + SUPPLIER + "-এর মধ্যকার Net Gap বেড়েছে " + group(s.change) + " BDT।"
-    : (s.change < 0
-      ? "গতকালের তুলনায় " + COMPANY + " ও " + SUPPLIER + "-এর মধ্যকার Net Gap কমেছে " + group(s.change) + " BDT।"
-      : "গতকালের তুলনায় " + COMPANY + " ও " + SUPPLIER + "-এর মধ্যকার Net Gap অপরিবর্তিত রয়েছে।");
-  return "📊 " + COMPANY + " — " + SUPPLIER + "\nDaily Gap Tracker\nতারিখ: " + fmtDate(s.date) + "\n\n" + last;
+  /* optional daily note — quiet, only when written */
+  if(showNote){
+    yy += 22;
+    box(ctx, pad, yy, gw, noteH, 20, C.white, C.hair);
+    ctx.textAlign = "left";
+    ctx.fillStyle = C.navy; ctx.font = "700 24px " + BN;
+    ctx.fillText(t.noteHead, pad+28, yy+34);
+    ctx.fillStyle = C.muted; ctx.font = noteFont;
+    var ny = yy + 74;
+    noteLines.forEach(function(ln){ ctx.fillText(ln, pad+28, ny); ny += 34; });
+    yy += noteH;
+  }
+
+  /* subtle credit */
+  ctx.textAlign = "center";
+  ctx.fillStyle = C.muted; ctx.font = "500 20px " + EN;
+  ctx.fillText(CREDIT, W/2, H - 62);
+
+  return cv;
 }
 
 function fontsReady(){
   return (document.fonts && document.fonts.ready) ? document.fonts.ready : Promise.resolve();
 }
+function canvasToFile(cv, name){
+  return new Promise(function(res, rej){
+    cv.toBlob(function(b){ b ? res(new File([b], name, { type:"image/png" })) : rej(new Error("no blob")); },
+      "image/png");
+  });
+}
+function downloadFile(file){
+  var url = URL.createObjectURL(file);
+  var a = document.createElement("a");
+  a.href = url; a.download = file.name; a.rel = "noopener";
+  document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(function(){ URL.revokeObjectURL(url); }, 4000);
+}
+/* image-only sharing: the PNG is the whole message, no caption anywhere */
+function shareImageFile(file){
+  if(navigator.canShare && navigator.share && navigator.canShare({ files:[file] })){
+    return navigator.share({ files:[file] }).catch(function(err){
+      if(err && err.name === "AbortError") return;
+      downloadFile(file);
+      toast(T().noShare);
+    });
+  }
+  downloadFile(file);
+  toast(T().noShare);
+  return Promise.resolve();
+}
+/* the full daily report, sized by drawReport itself — never the viewport */
 function makeFile(){
   return fontsReady().then(function(){
-    var cv = drawReport();
-    return new Promise(function(res, rej){
-      cv.toBlob(function(b){ b ? res(b) : rej(new Error("no blob")); }, "image/png");
-    });
-  }).then(function(blob){
-    return new File([blob], "murgi-net-" + state().date + ".png", { type:"image/png" });
+    return canvasToFile(drawReport(), "murginet-daily-report-" + state().date + ".png");
   });
 }
 
-/* ---------- WhatsApp share: native share sheet, never an auto-download ---------- */
+/* ---------- WhatsApp share: native sheet, never an automatic download ---------- */
+/* auto-save first, then the existing image pipeline runs unchanged */
 $("share").onclick = function(){
-  makeFile().then(function(file){
-    var text = caption();
-    var canFiles = !!(navigator.canShare && navigator.share) && navigator.canShare({ files:[file] });
-
-    if(canFiles){
-      return navigator.share({ files:[file], text:text }).catch(function(err){
-        if(err && err.name === "AbortError") return;
-        toast(T().noShare);
-      });
-    }
-    if(navigator.share){
-      toast(T().textOnly);
-      return navigator.share({ text:text }).catch(function(err){
-        if(err && err.name === "AbortError") return;
-        toast(T().noShare);
-      });
-    }
-    if(navigator.clipboard && navigator.clipboard.writeText){
-      navigator.clipboard.writeText(text).catch(function(){});
-    }
-    toast(T().noShare);
-  }).catch(function(){ toast(T().noShare); });
+  saveCurrent({ quiet:true }).then(function(ok){
+    if(!ok) return;
+    showSavedList();
+    return makeFile().then(shareImageFile).catch(function(){ toast(T().exportFail); });
+  });
 };
 
-/* explicit, user-chosen download only */
 $("png").onclick = function(){
-  makeFile().then(function(file){
-    var url = URL.createObjectURL(file);
-    var a = document.createElement("a");
-    a.href = url; a.download = file.name; document.body.appendChild(a); a.click(); a.remove();
-    setTimeout(function(){ URL.revokeObjectURL(url); }, 4000);
-    toast(T().downloaded);
-  }).catch(function(){ toast(T().noShare); });
+  saveCurrent({ quiet:true }).then(function(ok){
+    if(!ok) return;
+    showSavedList();
+    return makeFile().then(downloadFile).catch(function(){ toast(T().exportFail); });
+  });
 };
+
+/* ================================================================
+   v3.0 ADDITIVE FEATURE — DATE RANGE REPORT (read-only)
+   Reads the same saved records the daily tracker writes. Never writes,
+   never migrates, never touches daily state. Fully wrapped so a failure
+   here cannot stop the daily input or the daily report.
+   ================================================================ */
+var RTXT = {
+  bn:{ open:"তারিখ অনুযায়ী হিসাব দেখুন", close:"বন্ধ করুন", title:"তারিখ অনুযায়ী হিসাব",
+       start:"শুরুর তারিখ", end:"শেষের তারিখ", run:"রিপোর্ট দেখুন",
+       sumStart:"শুরুর নেট গ্যাপ", sumEnd:"শেষের নেট গ্যাপ", sumChange:"মোট পরিবর্তন",
+       chart:"নেট গ্যাপের পরিবর্তন", date:"তারিখ", change:"পরিবর্তন",
+       missing:"এই তারিখের হিসাব সংরক্ষিত নেই",
+       none:"এই সময়ের কোনো সংরক্ষিত হিসাব পাওয়া যায়নি",
+       share:"রেঞ্জ রিপোর্ট শেয়ার করুন", png:"রেঞ্জ রিপোর্ট PNG ডাউনলোড করুন",
+       bad:"রেঞ্জ রিপোর্ট তৈরি করা যায়নি",
+       order:"শুরুর তারিখ শেষের তারিখের পরে হতে পারে না",
+       rose:"বেড়েছে", fell:"কমেছে", flat:"অপরিবর্তিত রয়েছে" },
+  en:{ open:"তারিখ অনুযায়ী হিসাব দেখুন", close:"Close", title:"তারিখ অনুযায়ী হিসাব",
+       start:"শুরুর তারিখ", end:"শেষের তারিখ", run:"রিপোর্ট দেখুন",
+       sumStart:"শুরুর নেট গ্যাপ", sumEnd:"শেষের নেট গ্যাপ", sumChange:"মোট পরিবর্তন",
+       chart:"নেট গ্যাপের পরিবর্তন", date:"তারিখ", change:"পরিবর্তন",
+       missing:"এই তারিখের হিসাব সংরক্ষিত নেই",
+       none:"No saved accounts found in this period",
+       share:"Share range report", png:"Download range report PNG",
+       bad:"Could not build the range report",
+       order:"Start date cannot be after the end date",
+       rose:"বেড়েছে", fell:"কমেছে", flat:"অপরিবর্তিত রয়েছে" }
+};
+function RT(){ return RTXT[lang] || RTXT.bn; }
+
+/* every saved accounting date, newest last */
+function listSavedDates(){
+  var out = [];
+  function clean(keys){
+    return keys.filter(function(k){ return /^gap:\d{4}-\d{2}-\d{2}$/.test(k); })
+               .map(function(k){ return k.slice(4); }).sort();
+  }
+  try{
+    if(window.storage && window.storage.list){
+      return window.storage.list("gap:").then(function(r){
+        return clean((r && r.keys) || []);
+      }).catch(function(){ return []; });
+    }
+  }catch(e){}
+  try{
+    for(var i=0;i<localStorage.length;i++) out.push(localStorage.key(i));
+    return Promise.resolve(clean(out));
+  }catch(e){ return Promise.resolve([]); }
+}
+
+function daysBetween(a,b){
+  var out = [], cur = b;
+  var guard = 0;
+  while(cur >= a && guard++ < 800){ out.unshift(cur); cur = prevISO(cur); }
+  return out;
+}
+
+/* read-only: one row per calendar date in the range */
+function loadRangeRows(startIso, endIso){
+  var dates = daysBetween(startIso, endIso);
+  return Promise.all(dates.map(function(iso){
+    return store.get(key(iso)).then(function(rec){
+      var r = migrate(rec);
+      if(!r) return { iso:iso, missing:true };
+      /* same formula as the daily tracker — nothing new */
+      return {
+        iso:iso, missing:false,
+        sup:r.ts, mar:r.tm, stk:r.tstk, csh:r.tcsh,
+        net: r.ts - (r.tm + r.tstk + r.tcsh)
+      };
+    }).catch(function(){ return { iso:iso, missing:true }; });
+  })).then(function(rows){
+    var lastNet = null;
+    rows.forEach(function(row){
+      if(row.missing){ row.change = null; return; }
+      row.change = (lastNet === null) ? null : row.net - lastNet;
+      lastNet = row.net;
+    });
+    return rows;
+  });
+}
+
+function chgText(n){ return (n > 0 ? "+" : "\u2212") + group(n); }
+function chgColor(n){ return n > 0 ? C.red : (n < 0 ? C.green : C.navy); }
+
+/* one simple SVG line chart, gaps left as gaps */
+function chartSVG(rows){
+  var pts = rows.filter(function(r){ return !r.missing; });
+  if(!pts.length) return "";
+  var W = 620, H = 210, L = 46, R = 14, Tp = 14, B = 30;
+  var vals = pts.map(function(r){ return r.net; });
+  var min = Math.min.apply(null, vals), max = Math.max.apply(null, vals);
+  if(min === max){ min -= 1; max += 1; }
+  var n = rows.length;
+  function px(i){ return n === 1 ? (L + (W-L-R)/2) : L + i*(W-L-R)/(n-1); }
+  function py(v){ return Tp + (H-Tp-B) * (1 - (v-min)/(max-min)); }
+
+  var segs = [], cur = [];
+  rows.forEach(function(r,i){
+    if(r.missing){ if(cur.length){ segs.push(cur); cur = []; } return; }
+    cur.push(px(i).toFixed(1) + "," + py(r.net).toFixed(1));
+  });
+  if(cur.length) segs.push(cur);
+
+  var svg = '<svg viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="Net Gap trend">';
+  svg += '<line x1="'+L+'" y1="'+(H-B)+'" x2="'+(W-R)+'" y2="'+(H-B)+'" stroke="'+C.hair+'" stroke-width="1.5"/>';
+  svg += '<line x1="'+L+'" y1="'+Tp+'" x2="'+L+'" y2="'+(H-B)+'" stroke="'+C.hair+'" stroke-width="1.5"/>';
+  svg += '<text x="'+(L-6)+'" y="'+(py(max)+4)+'" text-anchor="end" font-size="10" fill="'+C.muted+'">'+group(max)+'</text>';
+  svg += '<text x="'+(L-6)+'" y="'+(py(min)+4)+'" text-anchor="end" font-size="10" fill="'+C.muted+'">'+group(min)+'</text>';
+  segs.forEach(function(sg){
+    if(sg.length === 1){
+      var xy = sg[0].split(",");
+      svg += '<circle cx="'+xy[0]+'" cy="'+xy[1]+'" r="3.5" fill="'+C.navy+'"/>';
+    } else {
+      svg += '<polyline points="'+sg.join(" ")+'" fill="none" stroke="'+C.navy+
+             '" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>';
+    }
+  });
+  var step = Math.ceil(n/6);
+  rows.forEach(function(r,i){
+    var d = fmtDate(r.iso).slice(0,5);
+    if(!r.missing){
+      svg += '<circle cx="'+px(i).toFixed(1)+'" cy="'+py(r.net).toFixed(1)+'" r="3" fill="'+C.navy+'"/>';
+    }
+    if(i % step === 0 || i === n-1){
+      svg += '<text x="'+px(i).toFixed(1)+'" y="'+(H-10)+'" text-anchor="middle" font-size="10" fill="'+C.muted+'">'+d+'</text>';
+    }
+  });
+  svg += '</svg>';
+  return svg;
+}
+
+function rangeSummary(rows){
+  var pts = rows.filter(function(r){ return !r.missing; });
+  if(!pts.length) return null;
+  var first = pts[0], last = pts[pts.length-1];
+  return { first:first, last:last, total:last.net - first.net, count:pts.length };
+}
+
+function renderRange(rows){
+  var t = RT(), out = $("range-out");
+  var sum = rangeSummary(rows);
+  if(!sum){
+    out.innerHTML = '<p class="rnote">' + t.none + '</p>';
+    return;
+  }
+  var html = '';
+  html += '<div class="rsum">' +
+    '<div class="start"><div class="k">' + t.sumStart + '</div><div class="v">' + signed(sum.first.net) + ' BDT</div></div>' +
+    '<div class="end"><div class="k">' + t.sumEnd + '</div><div class="v">' + signed(sum.last.net) + ' BDT</div></div>' +
+    '<div class="chg"><div class="k">' + t.sumChange + '</div><div class="v" style="color:' + chgColor(sum.total) + '">' +
+      (sum.total === 0 ? "0" : chgText(sum.total)) + ' BDT</div></div>' +
+    '</div>';
+
+  html += '<div class="chartwrap"><h3>' + t.chart + '</h3>' + chartSVG(rows) + '</div>';
+
+  html += '<table class="rtable"><thead><tr>' +
+    '<th class="d">' + t.date + '</th><th>' + T().sup + '</th><th>' + T().mar + '</th>' +
+    '<th>' + T().stk + '</th><th>' + T().csh + '</th><th>' + T().net + '</th><th>' + t.change + '</th>' +
+    '</tr></thead><tbody>';
+  rows.forEach(function(r){
+    if(r.missing){
+      html += '<tr class="miss"><td class="d">' + fmtDate(r.iso) + '</td>' +
+              '<td colspan="6">' + t.missing + '</td></tr>';
+      return;
+    }
+    html += '<tr>' +
+      '<td class="d">' + fmtDate(r.iso) + '</td>' +
+      '<td data-l="' + T().sup + '">' + group(r.sup) + '</td>' +
+      '<td data-l="' + T().mar + '">' + group(r.mar) + '</td>' +
+      '<td data-l="' + T().stk + '">' + group(r.stk) + '</td>' +
+      '<td data-l="' + T().csh + '">' + group(r.csh) + '</td>' +
+      '<td class="net" data-l="' + T().net + '">' + signed(r.net) + '</td>' +
+      '<td data-l="' + t.change + '" style="color:' + (r.change === null ? C.muted : chgColor(r.change)) + '">' +
+        (r.change === null ? "\u2014" : chgText(r.change)) + '</td>' +
+      '</tr>';
+  });
+  html += '</tbody></table>';
+  html += '<button class="btn btn-share" id="range-share" type="button" style="margin-top:14px">' + t.share + '</button>';
+  html += '<button class="btn btn-png" id="range-png" type="button">' + t.png + '</button>';
+  out.innerHTML = html;
+
+  var sh = $("range-share");
+  if(sh) sh.onclick = function(){ shareRange(rows); };
+  var dl = $("range-png");
+  if(dl) dl.onclick = function(){ downloadRange(rows); };
+}
+
+/* range report PNG — its own canvas, separate from the daily one */
+function drawRangeReport(rows){
+  var t = RTXT.bn, sum = rangeSummary(rows);
+  var W = 1080, pad = 62, gw = W - pad*2;
+  var chartH = 300, rowH = 46, headH = 52;
+  var tableH = headH + rows.length*rowH + 10;
+  var H = 250 + 140 + 26 + chartH + 26 + tableH + 80;
+
+  var cv = document.createElement("canvas");
+  cv.width = W; cv.height = H;
+  var ctx = cv.getContext("2d");
+  ctx.textBaseline = "middle";
+  ctx.fillStyle = C.bg; ctx.fillRect(0,0,W,H);
+  box(ctx, 28, 28, W-56, H-56, 26, C.white, C.edge);
+
+  ctx.textAlign = "center";
+  ctx.fillStyle = C.navy; ctx.font = "700 52px " + EN;
+  ctx.fillText(BRAND, W/2, 108);
+  ctx.fillStyle = C.navy; ctx.font = "500 29px " + BN;
+  ctx.fillText(SUPPLIER + "-এর সাথে হিসাব", W/2, 162);
+  ctx.fillStyle = C.muted; ctx.font = "500 26px " + BN;
+  ctx.fillText("তারিখ: " + fmtDate(rows[0].iso) + " — " + fmtDate(rows[rows.length-1].iso), W/2, 208);
+
+  var y = 250;
+  var cardW = (gw - 24) / 3;
+  var cards = [
+    [t.sumStart, sum ? signed(sum.first.net) + " BDT" : "—", C.blueCard, C.blueLine, C.navy],
+    [t.sumEnd,   sum ? signed(sum.last.net) + " BDT"  : "—", C.greenCard, C.greenLine, C.navy],
+    [t.sumChange, sum ? (sum.total === 0 ? "0 BDT" : chgText(sum.total) + " BDT") : "—",
+      C.cream, C.creamLine, sum ? chgColor(sum.total) : C.navy]
+  ];
+  cards.forEach(function(c,i){
+    var x = pad + i*(cardW+12);
+    box(ctx, x, y, cardW, 120, 18, c[2], c[3]);
+    ctx.textAlign = "center";
+    ctx.fillStyle = C.muted; ctx.font = "500 23px " + BN;
+    ctx.fillText(c[0], x + cardW/2, y + 40);
+    ctx.fillStyle = c[4]; ctx.font = "700 34px " + EN;
+    ctx.fillText(c[1], x + cardW/2, y + 84);
+  });
+  y += 120 + 26;
+
+  /* chart */
+  box(ctx, pad, y, gw, chartH, 18, C.white, C.hair);
+  ctx.textAlign = "left"; ctx.fillStyle = C.navy; ctx.font = "700 25px " + BN;
+  ctx.fillText(t.chart, pad + 24, y + 34);
+  var cl = pad + 130, cr = W - pad - 30, ct = y + 62, cb = y + chartH - 46;
+  var pts = rows.filter(function(r){ return !r.missing; });
+  var vals = pts.map(function(r){ return r.net; });
+  var mn = vals.length ? Math.min.apply(null, vals) : 0;
+  var mx = vals.length ? Math.max.apply(null, vals) : 1;
+  if(mn === mx){ mn -= 1; mx += 1; }
+  var n = rows.length;
+  function PX(i){ return n === 1 ? (cl+cr)/2 : cl + i*(cr-cl)/(n-1); }
+  function PY(v){ return cb - (cb-ct)*((v-mn)/(mx-mn)); }
+  ctx.strokeStyle = C.hair; ctx.lineWidth = 2;
+  ctx.beginPath(); ctx.moveTo(cl, cb); ctx.lineTo(cr, cb); ctx.stroke();
+  ctx.beginPath(); ctx.moveTo(cl, ct); ctx.lineTo(cl, cb); ctx.stroke();
+  ctx.textAlign = "right"; ctx.fillStyle = C.muted; ctx.font = "500 20px " + EN;
+  ctx.fillText(group(mx), cl - 10, PY(mx));
+  ctx.fillText(group(mn), cl - 10, PY(mn));
+  ctx.strokeStyle = C.navy; ctx.lineWidth = 3.5; ctx.lineJoin = "round";
+  var drawing = false;
+  rows.forEach(function(r,i){
+    if(r.missing){ if(drawing){ ctx.stroke(); drawing = false; } return; }
+    if(!drawing){ ctx.beginPath(); ctx.moveTo(PX(i), PY(r.net)); drawing = true; }
+    else ctx.lineTo(PX(i), PY(r.net));
+  });
+  if(drawing) ctx.stroke();
+  ctx.fillStyle = C.navy;
+  var step = Math.ceil(n/8);
+  rows.forEach(function(r,i){
+    if(!r.missing){
+      ctx.beginPath(); ctx.arc(PX(i), PY(r.net), 5, 0, Math.PI*2); ctx.fill();
+    }
+    if(i % step === 0 || i === n-1){
+      ctx.textAlign = "center"; ctx.fillStyle = C.muted; ctx.font = "500 19px " + EN;
+      ctx.fillText(fmtDate(r.iso).slice(0,5), PX(i), cb + 26);
+      ctx.fillStyle = C.navy;
+    }
+  });
+  y += chartH + 26;
+
+  /* date-wise table */
+  box(ctx, pad, y, gw, tableH, 18, C.white, C.hair);
+  var colX = [pad+22, pad+240, pad+400, pad+540, pad+700, pad+840, pad+gw-22];
+  var heads = [t.date, TXT.bn.sup, TXT.bn.mar, TXT.bn.stk, TXT.bn.csh, TXT.bn.net, t.change];
+  ctx.font = "600 20px " + BN; ctx.fillStyle = C.muted;
+  heads.forEach(function(h,i){
+    ctx.textAlign = i === 0 ? "left" : "right";
+    ctx.fillText(h, colX[i], y + headH/2 + 6);
+  });
+  var ry = y + headH;
+  rows.forEach(function(r){
+    ctx.strokeStyle = C.hair; ctx.lineWidth = 1.2;
+    ctx.beginPath(); ctx.moveTo(pad+14, ry); ctx.lineTo(pad+gw-14, ry); ctx.stroke();
+    var mid = ry + rowH/2;
+    ctx.textAlign = "left"; ctx.fillStyle = C.navy; ctx.font = "600 21px " + EN;
+    ctx.fillText(fmtDate(r.iso), colX[0], mid);
+    if(r.missing){
+      ctx.fillStyle = C.muted; ctx.font = "500 20px " + BN;
+      ctx.fillText(t.missing, colX[1] - 60, mid);
+    } else {
+      ctx.textAlign = "right"; ctx.font = "500 21px " + EN; ctx.fillStyle = C.navy;
+      ctx.fillText(group(r.sup), colX[1], mid);
+      ctx.fillText(group(r.mar), colX[2], mid);
+      ctx.fillText(group(r.stk), colX[3], mid);
+      ctx.fillText(group(r.csh), colX[4], mid);
+      ctx.font = "700 21px " + EN;
+      ctx.fillText(signed(r.net), colX[5], mid);
+      ctx.fillStyle = r.change === null ? C.muted : chgColor(r.change);
+      ctx.fillText(r.change === null ? "\u2014" : chgText(r.change), colX[6], mid);
+    }
+    ry += rowH;
+  });
+
+  ctx.textAlign = "center"; ctx.fillStyle = C.muted; ctx.font = "500 20px " + EN;
+  ctx.fillText(CREDIT, W/2, H - 52);
+  return cv;
+}
+
+/* the complete range report as a PNG File — height comes from the content, not the screen */
+function makeRangeFile(rows){
+  var ready = (document.fonts && document.fonts.ready) ? document.fonts.ready : Promise.resolve();
+  return ready.then(function(){
+    var name = "murginet-range-report-" + rows[0].iso + "-to-" + rows[rows.length-1].iso + ".png";
+    return canvasToFile(drawRangeReport(rows), name);
+  });
+}
+/* image-only share, same helper the daily report uses */
+function shareRange(rows){
+  makeRangeFile(rows).then(shareImageFile).catch(function(){ toast(RT().bad); });
+}
+function downloadRange(rows){
+  makeRangeFile(rows).then(downloadFile).catch(function(){ toast(RT().bad); });
+}
+
+function runRange(){
+  try{
+    var a = $("rstart").value, b = $("rend").value;
+    if(!a || !b) return;
+    if(a > b){ toast(RT().order); return; }
+    loadRangeRows(a, b).then(function(rows){ renderRange(rows); })
+      .catch(function(){ toast(RT().bad); });
+  }catch(e){ toast(RT().bad); }
+}
+
+/* default range: the 7 most recent saved accounting dates, nothing invented */
+function initRangeDefaults(){
+  return listSavedDates().then(function(dates){
+    var endIso, startIso;
+    if(dates.length){
+      endIso = dates[dates.length-1];
+      startIso = dates[Math.max(0, dates.length-7)];
+    } else {
+      endIso = elDate.value;
+      startIso = endIso;
+      for(var i=0;i<6;i++) startIso = prevISO(startIso);
+    }
+    $("rstart").value = startIso;
+    $("rend").value = endIso;
+  }).catch(function(){});
+}
+
+try{
+  $("range-open").onclick = function(){
+    var boxEl = $("rangebox"), hidden = boxEl.classList.contains("hide");
+    if(hidden){
+      boxEl.classList.remove("hide");
+      $("range-open").textContent = RT().close;
+      if(!$("rstart").value){
+        initRangeDefaults().then(runRange);
+      } else {
+        runRange();
+      }
+      boxEl.scrollIntoView({ behavior:"smooth", block:"nearest" });
+    } else {
+      boxEl.classList.add("hide");
+      $("range-open").textContent = RT().open;
+    }
+  };
+  $("range-run").onclick = runRange;
+}catch(e){ /* range report is optional; the daily tracker keeps working */ }
 
 /* ---------- init ---------- */
 (function init(){
-  var d = new Date(); d.setDate(d.getDate()-1);
+  var d = new Date(); d.setDate(d.getDate()-1);   /* accounting date = today − 1 day */
   var iso = toISO(d);
   elDate.value = iso;
   store.get("gap:lang").then(function(l){
     if(l === "en" || l === "bn") lang = l;
     applyLang();
-    return store.get(key(iso));
-  }).then(function(rec){
-    if(rec){ fill(rec); }
-    else { fill({ys:3026330, ym:1487041, ts:2942230, tm:1456829}); }
+    return Promise.all([ store.get(key(iso)), store.get(key(prevISO(iso))) ]);
+  }).then(function(both){
+    if(both[0] || both[1]) return loadDate(iso);
+    prevKnown = true;
+    fill({ ys:3000000, ym:1400000, ystk:500000, ycsh:100000, ydep:0,
+           ts:3050000, tm:1450000, tstk:550000, tcsh:80000,  tdep:0 });
+  }).then(function(){
+    return refreshSavedList();
+  }).then(function(){
+    listSavedDates().then(function(d){ if(d.length) showSavedList(); }).catch(function(){});
   });
 })();
 
 })();
-</script></body></html>
+</script>
+</body>
+</html>
